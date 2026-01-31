@@ -10,10 +10,10 @@ function BookDetails() {
   return (
     <div className="book-details">
       <h1>{book.title}</h1>
-      <p>by {book.author}</p>
+      <p>by <strong>{book.author}</strong></p>
       <img src={book.image} alt={book.title} />
-      <p>Category: {book.category}</p>
-      <p><strong>Rating:</strong> ⭐ {book.rating} / 5</p>
+      <p><strong>Category:</strong> {book.category}</p>
+      <p><strong>Rating:</strong> {book.rating} / 5</p>
       <p className="description">{book.description}</p>
     </div>
   );

@@ -5,7 +5,7 @@ function BookCard({ book }) {
     <div className="book-card">
       <img src={book.image} alt={book.title} />
       <h3>{book.title}</h3>
-      <p className="author">by {book.author}</p>
+      <p className="author">by <strong>{book.author}</strong></p>
 
       <Link to={`/book/${book.id}`}>
         <button className="details-btn">View Details</button>
