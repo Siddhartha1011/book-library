@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import BookCard from "./BookCard";
 import { books } from "./data/book.js";
 
@@ -10,6 +11,12 @@ const categories = [
 ];
 
 function Home() {
+  const navigate = useNavigate();
+
+  const handleCategoryClick = (cat) => {
+    navigate(`/books/${cat.toLowerCase()}`);
+  };
+
   return (
     <div className="home">
       <h1>Welcome to the Online Book Store </h1>
@@ -20,7 +27,9 @@ function Home() {
         <h2>Book Categories</h2>
         <ul>
           {categories.map((cat, index) => (
-            <li key={index}>{cat}</li>
+            <li key={index} onClick={() => handleCategoryClick(cat)}>
+                {cat}
+            </li>
           ))}
         </ul>
       </section>
