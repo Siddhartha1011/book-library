@@ -114,8 +114,18 @@
   text-align: center;
 }
 
-.browse-books h1 {
-  margin-bottom: 15px;
+.sticky-header {
+  position: sticky;
+  top: 90px;               
+  z-index: 900;
+  width: 100%;               
+  background-color: white;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.browse-books h1 { 
+  margin: 5px;
 }
 
 .search-bar {

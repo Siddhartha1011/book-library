@@ -1,11 +1,13 @@
 import { useParams, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import BookCard from "./BookCard";
-import { books } from "./data/book";
 
 function BrowseBooks() {
   const { category } = useParams();
   const location = useLocation();
+  const books = useSelector((state) => state.books.list);
+
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredBooks, setFilteredBooks] = useState([]);
 
@@ -27,22 +29,22 @@ function BrowseBooks() {
     }
 
     setFilteredBooks(filtered);
-  }, [category, searchTerm, location]);
+  }, [books, category, searchTerm, location]);
 
   return (
     <div className="browse-books">
-      <h1>Browse Books {category && `- ${category}`}</h1>
+      <div className="sticky-header">
+        <h1>Browse Books {category && `- ${category}`}</h1>
 
-      {/* Search */}
-      <input
-        type="text"
-        placeholder="Search by title or author..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        className="search-bar"
-      />
+        <input
+          type="text"
+          placeholder="Search by title or author..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="search-bar"
+        />
+      </div>
 
-      {/* Book List */}
       <div className="book-grid">
         {filteredBooks.length ? (
           filteredBooks.map((book) => (
