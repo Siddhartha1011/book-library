@@ -1,16 +1,51 @@
-# React + Vite
+# Online Library Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React-based Online Library application that allows users to browse books by category, view book details, add new books, and handle invalid routes using a 404 page.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Features
 
-## React Compiler
+- Home page with book categories and popular books
+- Browse books by category
+- Search books by title or author
+- View detailed information for each book
+- Add new books using a form (Redux state management)
+- 404 Page Not Found for invalid routes
+- Responsive and clean UI
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+##  Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- React Router
+- Redux Toolkit
+- CSS
+
+---
+
+## Installation & Setup
+
+Follow these steps to run the application locally:
+
+```bash
+### 1. Clone the repository
+``bash
+git clone https://github.com/Siddhartha1011/book-library.git
+
+### 2.Navigate to the project directory
+``bash
+cd library
+
+### 3.Navigate to the project directory
+``bash
+npm install
+npm install react-router-dom
+npm install @reduxjs/toolkit react-redux
+
+### 4.Start the development server
+``bash
+npm run dev
+
+#### then open the local development URL shown in the terminal
