@@ -241,3 +241,30 @@
 .add-book button:hover {
   background-color: #29292c;
 }
+
+.not-found {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.not-found h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.not-found p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.not-found .home-link {
+  text-decoration: none;
+  color: white;
+  background-color: #4d4c57;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.not-found .home-link:hover {
+  background-color: #050505;
+}
